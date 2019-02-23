@@ -2,7 +2,7 @@
 torch_nightly
 fastai
 starlette
-uvicorn
+uvicorn==0.3.32
 python-multipart
 aiofiles
 aiohttp

@@ -1,6 +1,6 @@
 -f https://download.pytorch.org/whl/nightly/cpu/torch_nightly.html
 torch_nightly
-fastai==1.0.9
+fastai==1.0.24
 starlette
 uvicorn==0.3.32
 python-multipart

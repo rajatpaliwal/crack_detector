@@ -8,7 +8,7 @@ from io import BytesIO
 from fastai import *
 from fastai.vision import *
 
-model_file_url = 'https://drive.google.com/uc?export=download&id=10ZS5LIE3XUvrBFGhRu1ALbsJdPSdXqe5'
+model_file_url = 'https://drive.google.com/uc?export=download&id=1t6G-i9AREhoh65Mc4xjHjTGEhSYZSVgU'
 model_file_name = 'model'
 classes = ['crack','nocrack']
 path = Path(__file__).parent
@@ -28,7 +28,7 @@ async def setup_learner():
     await download_file(model_file_url, path/'models'/f'{model_file_name}.pth')
     data_bunch = ImageDataBunch.single_from_classes(path, classes,
         ds_tfms=get_transforms(), size=224).normalize(imagenet_stats)
-    learn = create_cnn(data_bunch, models.resnet18, pretrained=False)
+    learn = create_cnn(data_bunch, models.resnet34, pretrained=False)
     learn.load(model_file_name)
     return learn
 
